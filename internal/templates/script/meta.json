@@ -1,0 +1,18 @@
+{
+  "id": "UNKNOWN",
+  "name": "UNKNOWN",
+  "version": 0,
+  "imports": [],
+  "exports": [],
+  "program": {
+    "type": "Program",
+    "sourceType": {
+      "language": "typescript",
+      "moduleKind": "module",
+      "variant": "jsx"
+    },
+    "hashbang": null,
+    "directives": [],
+    "body": []
+  }
+}

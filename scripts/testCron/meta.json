@@ -1,0 +1,72 @@
+{
+  "version": 0,
+  "imports": [],
+  "exports": [
+    "default"
+  ],
+  "program": {
+    "type": "Program",
+    "sourceType": {
+      "language": "typescript",
+      "moduleKind": "module",
+      "variant": "jsx"
+    },
+    "hashbang": null,
+    "directives": [],
+    "body": [
+      {
+        "type": "ExportDefaultDeclaration",
+        "declaration": {
+          "type": "FunctionDeclaration",
+          "id": null,
+          "generator": false,
+          "async": true,
+          "declare": false,
+          "typeParameters": null,
+          "thisParam": null,
+          "params": {
+            "type": "FormalParameters",
+            "kind": "FormalParameter",
+            "items": [
+              {
+                "type": "FormalParameter",
+                "decorators": [],
+                "pattern": {
+                  "type": "Identifier",
+                  "name": "interval",
+                  "typeAnnotation": {
+                    "type": "TSTypeAnnotation",
+                    "typeAnnotation": {
+                      "type": "TSTypeReference",
+                      "typeName": {
+                        "type": "Identifier",
+                        "name": "Interval"
+                      },
+                      "typeParameters": null
+                    }
+                  },
+                  "optional": false
+                },
+                "accessibility": null,
+                "readonly": false,
+                "override": false
+              }
+            ]
+          },
+          "returnType": null,
+          "body": {
+            "type": "FunctionBody",
+            "directives": [],
+            "statements": []
+          }
+        },
+        "exported": {
+          "type": "Identifier",
+          "name": "default"
+        }
+      }
+    ]
+  },
+  "id": "01J7Y4GJWKFQE6YACQMJB6GWCN",
+  "name": "testCron"
+}

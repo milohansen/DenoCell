@@ -1,0 +1,219 @@
+{
+  "version": "4",
+  "specifiers": {
+    "npm:@types/node@*": "18.16.19",
+    "npm:@types/react@*": "18.3.5",
+    "npm:esbuild@*": "0.23.1",
+    "npm:oxc-parser@0.29": "0.29.0",
+    "npm:oxc-transform@*": "0.29.0",
+    "npm:react@*": "18.3.1"
+  },
+  "npm": {
+    "@esbuild/aix-ppc64@0.23.1": {
+      "integrity": "51299374de171dbd80bb7d838e1cfce9af36f353"
+    },
+    "@esbuild/android-arm64@0.23.1": {
+      "integrity": "58565291a1fe548638adb9c584237449e5e14018"
+    },
+    "@esbuild/android-arm@0.23.1": {
+      "integrity": "5eb8c652d4c82a2421e3395b808e6d9c42c862ee"
+    },
+    "@esbuild/android-x64@0.23.1": {
+      "integrity": "ae19d665d2f06f0f48a6ac9a224b3f672e65d517"
+    },
+    "@esbuild/darwin-arm64@0.23.1": {
+      "integrity": "05b17f91a87e557b468a9c75e9d85ab10c121b16"
+    },
+    "@esbuild/darwin-x64@0.23.1": {
+      "integrity": "c58353b982f4e04f0d022284b8ba2733f5ff0931"
+    },
+    "@esbuild/freebsd-arm64@0.23.1": {
+      "integrity": "f9220dc65f80f03635e1ef96cfad5da1f446f3bc"
+    },
+    "@esbuild/freebsd-x64@0.23.1": {
+      "integrity": "69bd8511fa013b59f0226d1609ac43f7ce489730"
+    },
+    "@esbuild/linux-arm64@0.23.1": {
+      "integrity": "8050af6d51ddb388c75653ef9871f5ccd8f12383"
+    },
+    "@esbuild/linux-arm@0.23.1": {
+      "integrity": "ecaabd1c23b701070484990db9a82f382f99e771"
+    },
+    "@esbuild/linux-ia32@0.23.1": {
+      "integrity": "3ed2273214178109741c09bd0687098a0243b333"
+    },
+    "@esbuild/linux-loong64@0.23.1": {
+      "integrity": "a0fdf440b5485c81b0fbb316b08933d217f5d3ac"
+    },
+    "@esbuild/linux-mips64el@0.23.1": {
+      "integrity": "e11a2806346db8375b18f5e104c5a9d4e81807f6"
+    },
+    "@esbuild/linux-ppc64@0.23.1": {
+      "integrity": "06a2744c5eaf562b1a90937855b4d6cf7c75ec96"
+    },
+    "@esbuild/linux-riscv64@0.23.1": {
+      "integrity": "65b46a2892fc0d1af4ba342af3fe0fa4a8fe08e7"
+    },
+    "@esbuild/linux-s390x@0.23.1": {
+      "integrity": "e71ea18c70c3f604e241d16e4e5ab193a9785d6f"
+    },
+    "@esbuild/linux-x64@0.23.1": {
+      "integrity": "d47f97391e80690d4dfe811a2e7d6927ad9eed24"
+    },
+    "@esbuild/netbsd-x64@0.23.1": {
+      "integrity": "44e743c9778d57a8ace4b72f3c6b839a3b74a653"
+    },
+    "@esbuild/openbsd-arm64@0.23.1": {
+      "integrity": "05c5a1faf67b9881834758c69f3e51b7dee015d7"
+    },
+    "@esbuild/openbsd-x64@0.23.1": {
+      "integrity": "2e58ae511bacf67d19f9f2dcd9e8c5a93f00c273"
+    },
+    "@esbuild/sunos-x64@0.23.1": {
+      "integrity": "adb022b959d18d3389ac70769cef5a03d3abd403"
+    },
+    "@esbuild/win32-arm64@0.23.1": {
+      "integrity": "84906f50c212b72ec360f48461d43202f4c8b9a2"
+    },
+    "@esbuild/win32-ia32@0.23.1": {
+      "integrity": "5e3eacc515820ff729e90d0cb463183128e82fac"
+    },
+    "@esbuild/win32-x64@0.23.1": {
+      "integrity": "81fd50d11e2c32b2d6241470e3185b70c7b30699"
+    },
+    "@oxc-parser/binding-darwin-arm64@0.29.0": {
+      "integrity": "3342c3b950bb67e563b7d3c790c03995d0f82c06"
+    },
+    "@oxc-parser/binding-darwin-x64@0.29.0": {
+      "integrity": "7177ee16bf44d8d478aefbbd2ead861ddd0437d1"
+    },
+    "@oxc-parser/binding-linux-arm64-gnu@0.29.0": {
+      "integrity": "c79ed95ac983b198ef2c8f9f026da40e550d1b22"
+    },
+    "@oxc-parser/binding-linux-arm64-musl@0.29.0": {
+      "integrity": "b794ac99d64831db6eb2d8f297397f93694a29f9"
+    },
+    "@oxc-parser/binding-linux-x64-gnu@0.29.0": {
+      "integrity": "d211de4cd77d46c2718c1f7649d540cfdc947f16"
+    },
+    "@oxc-parser/binding-linux-x64-musl@0.29.0": {
+      "integrity": "db41350d7012aa3af06ad4e1af28b7bf0d5d229a"
+    },
+    "@oxc-parser/binding-win32-arm64-msvc@0.29.0": {
+      "integrity": "563693cbc570b82b910a714f0db60fe0887600b3"
+    },
+    "@oxc-parser/binding-win32-x64-msvc@0.29.0": {
+      "integrity": "26df4411867ad74d861de3dd75fe6a191434e09e"
+    },
+    "@oxc-transform/binding-darwin-arm64@0.29.0": {
+      "integrity": "c019865f7c3c9631739bf7d0183472a7f61dac77"
+    },
+    "@oxc-transform/binding-darwin-x64@0.29.0": {
+      "integrity": "9bd7e5a37f0e819ee8e36f7859584f3ae36b0fcd"
+    },
+    "@oxc-transform/binding-linux-arm64-gnu@0.29.0": {
+      "integrity": "fc2efdb7603b155cbdd88b44838d1e7e0dfeefe6"
+    },
+    "@oxc-transform/binding-linux-arm64-musl@0.29.0": {
+      "integrity": "64bbb389b94df189cc1644178629db9736837e7f"
+    },
+    "@oxc-transform/binding-linux-x64-gnu@0.29.0": {
+      "integrity": "7cb1db8d8d516d197e7bcf6e74592744e4578f64"
+    },
+    "@oxc-transform/binding-linux-x64-musl@0.29.0": {
+      "integrity": "8fb8f88725b3dac7ec9cfff18660160c5928a3aa"
+    },
+    "@oxc-transform/binding-win32-arm64-msvc@0.29.0": {
+      "integrity": "a63d81f060e7030ab65ae09f5ec5cfc398d71dda"
+    },
+    "@oxc-transform/binding-win32-x64-msvc@0.29.0": {
+      "integrity": "b20e28fc198639f34184fa36f3cfb10efcf06a40"
+    },
+    "@types/node@18.16.19": {
+      "integrity": "cb03fca8910fdeb7595b755126a8a78144714eea"
+    },
+    "@types/prop-types@15.7.12": {
+      "integrity": "12bb1e2be27293c1406acb6af1c3f3a1481d98c6"
+    },
+    "@types/react@18.3.5": {
+      "integrity": "5f524c2ad2089c0ff372bbdabc77ca2c4dbadf8f",
+      "dependencies": [
+        "@types/prop-types",
+        "csstype"
+      ]
+    },
+    "csstype@3.1.3": {
+      "integrity": "d80ff294d114fb0e6ac500fbf85b60137d7eff81"
+    },
+    "esbuild@0.23.1": {
+      "integrity": "40fdc3f9265ec0beae6f59824ade1bd3d3d2dab8",
+      "dependencies": [
+        "@esbuild/aix-ppc64",
+        "@esbuild/android-arm",
+        "@esbuild/android-arm64",
+        "@esbuild/android-x64",
+        "@esbuild/darwin-arm64",
+        "@esbuild/darwin-x64",
+        "@esbuild/freebsd-arm64",
+        "@esbuild/freebsd-x64",
+        "@esbuild/linux-arm",
+        "@esbuild/linux-arm64",
+        "@esbuild/linux-ia32",
+        "@esbuild/linux-loong64",
+        "@esbuild/linux-mips64el",
+        "@esbuild/linux-ppc64",
+        "@esbuild/linux-riscv64",
+        "@esbuild/linux-s390x",
+        "@esbuild/linux-x64",
+        "@esbuild/netbsd-x64",
+        "@esbuild/openbsd-arm64",
+        "@esbuild/openbsd-x64",
+        "@esbuild/sunos-x64",
+        "@esbuild/win32-arm64",
+        "@esbuild/win32-ia32",
+        "@esbuild/win32-x64"
+      ]
+    },
+    "js-tokens@4.0.0": {
+      "integrity": "19203fb59991df98e3a287050d4647cdeaf32499"
+    },
+    "loose-envify@1.4.0": {
+      "integrity": "71ee51fa7be4caec1a63839f7e682d8132d30caf",
+      "dependencies": [
+        "js-tokens"
+      ]
+    },
+    "oxc-parser@0.29.0": {
+      "integrity": "fbb749712a6b61136e373dd5b98323b9c801de08",
+      "dependencies": [
+        "@oxc-parser/binding-darwin-arm64",
+        "@oxc-parser/binding-darwin-x64",
+        "@oxc-parser/binding-linux-arm64-gnu",
+        "@oxc-parser/binding-linux-arm64-musl",
+        "@oxc-parser/binding-linux-x64-gnu",
+        "@oxc-parser/binding-linux-x64-musl",
+        "@oxc-parser/binding-win32-arm64-msvc",
+        "@oxc-parser/binding-win32-x64-msvc"
+      ]
+    },
+    "oxc-transform@0.29.0": {
+      "integrity": "7722acbbcb2dfc8bb43580239fed21c2e9104f02",
+      "dependencies": [
+        "@oxc-transform/binding-darwin-arm64",
+        "@oxc-transform/binding-darwin-x64",
+        "@oxc-transform/binding-linux-arm64-gnu",
+        "@oxc-transform/binding-linux-arm64-musl",
+        "@oxc-transform/binding-linux-x64-gnu",
+        "@oxc-transform/binding-linux-x64-musl",
+        "@oxc-transform/binding-win32-arm64-msvc",
+        "@oxc-transform/binding-win32-x64-msvc"
+      ]
+    },
+    "react@18.3.1": {
+      "integrity": "49ab892009c53933625bd16b2533fc754cab2891",
+      "dependencies": [
+        "loose-envify"
+      ]
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "id": "UNKNOWN",
+  "name": "UNKNOWN",
+  "version": 0,
+  "imports": [],
+  "exports": [
+    "default"
+  ],
+  "program": {
+    "type": "Program",
+    "sourceType": {
+      "language": "typescript",
+      "moduleKind": "module",
+      "variant": "jsx"
+    },
+    "hashbang": null,
+    "directives": [],
+    "body": [
+      {
+        "type": "ExportDefaultDeclaration",
+        "declaration": {
+          "type": "FunctionDeclaration",
+          "id": null,
+          "generator": false,
+          "async": true,
+          "declare": false,
+          "typeParameters": null,
+          "thisParam": null,
+          "params": {
+            "type": "FormalParameters",
+            "kind": "FormalParameter",
+            "items": [
+              {
+                "type": "FormalParameter",
+                "decorators": [],
+                "pattern": {
+                  "type": "Identifier",
+                  "name": "req",
+                  "typeAnnotation": {
+                    "type": "TSTypeAnnotation",
+                    "typeAnnotation": {
+                      "type": "TSTypeReference",
+                      "typeName": {
+                        "type": "Identifier",
+                        "name": "Request"
+                      },
+                      "typeParameters": null
+                    }
+                  },
+                  "optional": false
+                },
+                "accessibility": null,
+                "readonly": false,
+                "override": false
+              }
+            ]
+          },
+          "returnType": {
+            "type": "TSTypeAnnotation",
+            "typeAnnotation": {
+              "type": "TSTypeReference",
+              "typeName": {
+                "type": "Identifier",
+                "name": "Promise"
+              },
+              "typeParameters": {
+                "type": "TSTypeParameterInstantiation",
+                "params": [
+                  {
+                    "type": "TSTypeReference",
+                    "typeName": {
+                      "type": "Identifier",
+                      "name": "Response"
+                    },
+                    "typeParameters": null
+                  }
+                ]
+              }
+            }
+          },
+          "body": {
+            "type": "FunctionBody",
+            "directives": [],
+            "statements": [
+              {
+                "type": "ReturnStatement",
+                "argument": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "StaticMemberExpression",
+                    "object": {
+                      "type": "Identifier",
+                      "name": "Response"
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "json"
+                    },
+                    "optional": false
+                  },
+                  "typeParameters": null,
+                  "arguments": [
+                    {
+                      "type": "ObjectExpression",
+                      "properties": [
+                        {
+                          "type": "ObjectProperty",
+                          "kind": "init",
+                          "key": {
+                            "type": "Identifier",
+                            "name": "ok"
+                          },
+                          "value": {
+                            "type": "BooleanLiteral",
+                            "value": true
+                          },
+                          "init": null,
+                          "method": false,
+                          "shorthand": false,
+                          "computed": false
+                        }
+                      ]
+                    }
+                  ],
+                  "optional": false
+                }
+              }
+            ]
+          }
+        },
+        "exported": {
+          "type": "Identifier",
+          "name": "default"
+        }
+      }
+    ]
+  }
+}

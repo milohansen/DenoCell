@@ -1,0 +1,23 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "pack": "rolldown -c"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1",
+    "@std/datetime": "jsr:@std/datetime@^0.225.2",
+    "@std/log": "jsr:@std/log@^0.224.7",
+    "@std/path": "jsr:@std/path@^1.0.6",
+    "@std/text": "jsr:@std/text@^1.0.6",
+    "oxc-parser": "npm:oxc-parser@^0.29.0",
+    "oxc-resolver": "npm:oxc-resolver@^1.11.0",
+    "oxc-transform": "npm:oxc-transform@^0.29.0",
+    "rolldown": "npm:rolldown@^0.13.2-snapshot-3777bfb-20240913003043"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "npm:react",
+    "jsxImportSourceTypes": "npm:@types/react",
+    "types": ["deno.ns", "./internal/types.d.ts"]
+  }
+}
