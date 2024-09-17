@@ -1,4 +1,3 @@
-import { brotliCompressSync } from "node:zlib";
 import parser from "oxc-parser";
 
 export async function generateMetadata(contents: string, filePath: string) {
@@ -19,32 +18,12 @@ export async function generateMetadata(contents: string, filePath: string) {
     throw new Error("Failed to parse program");
   }
 
-  const types = new Set<string>();
-  const customProgram = walkProgramCustom(program, (node) => {
-    if (
-      typeof node === "object" && !!node && ("type" in node) &&
-      typeof node.type === "string"
-    ) {
-      // console.log("static member expression", node.object.name);
-      types.add(node.type);
-    }
-  });
-
-  const programString = JSON.stringify(customProgram, null);
-  await Deno.writeTextFile(
-    filePath + ".program.json",
-    programString,
-  );
-  await Deno.writeFile(
-    filePath + ".program.json.br",
-    brotliCompressSync(new TextEncoder().encode(programString)),
-  );
-
   const staticMemberExpressionSet = new Set<string>();
 
-  const metadata: ScriptMeta = {
+  const metadata: CellMeta = {
     id: "UNKNOWN",
     name: "UNKNOWN",
+    type: "script",
     version: 0,
     imports: lexerResult.imports.map((i) => i.n || "UNKNOWN"),
     exports: lexerResult.exports.map((i) => i.n),
@@ -60,9 +39,11 @@ if (import.meta.main) {
   // await run("std/storage");
 }
 
-export type ScriptMeta = {
+export type CellMeta = {
   id: string;
   name: string;
+
+  type: CellType;
 
   version: number;
   imports: string[];
@@ -87,34 +68,10 @@ function walkProgram(
 
       const newObj = structuredClone(obj) as Record<string, unknown>;
       for (const key of Object.getOwnPropertyNames(newObj)) {
-        if (typeof newObj[key] === "number") {
+        if (typeof newObj[key] === "number" && (key === "start" || key === "end")) {
           delete newObj[key];
-        } else {
+        } else if (typeof newObj[key] === "object") {
           newObj[key] = walkProgram(newObj[key], staticMemberExpressionSet);
-        }
-      }
-      return newObj;
-    }
-  }
-
-  return obj;
-}
-function walkProgramCustom(
-  obj: unknown,
-  processNode: (node: unknown) => unknown,
-): unknown {
-  if (typeof obj === "object" && obj) {
-    if (Array.isArray(obj)) {
-      return obj.map((v) => walkProgramCustom(v, processNode));
-    } else {
-      processNode(obj);
-
-      const newObj = structuredClone(obj) as Record<string, unknown>;
-      for (const key of Object.getOwnPropertyNames(newObj)) {
-        if (typeof newObj[key] === "number") {
-          delete newObj[key];
-        } else {
-          newObj[key] = walkProgramCustom(newObj[key], processNode);
         }
       }
       return newObj;

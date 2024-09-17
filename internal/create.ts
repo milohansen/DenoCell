@@ -1,28 +1,30 @@
-import { ScriptMeta } from "./parse.ts";
-import { ulid } from "jsr:@std/ulid";
+import { CellMeta } from "./parse.ts";
+import { ulid } from "@std/ulid";
 
 export async function create(name: string, type: string) {
   const dir = Deno.readDir(`internal/templates/${type}`);
 
-  await Deno.mkdir(`scripts/${name}`, { recursive: true });
+  const id = ulid();
+
+  await Deno.mkdir(`scripts/${id}`, { recursive: true });
 
   for await (const entry of dir) {
     // console.log("entry", entry);
     if (entry.isFile) {
       if (entry.name === "meta.json") {
-        const content = JSON.parse(
+        const meta = JSON.parse(
           await Deno.readTextFile(`internal/templates/${type}/${entry.name}`),
-        ) as ScriptMeta;
-        content.id = ulid();
-        content.name = name;
+        ) as CellMeta;
+        meta.id = id;
+        meta.name = name;
         await Deno.writeTextFile(
-          `scripts/${name}/${entry.name}`,
-          JSON.stringify(content, null, 2),
+          `scripts/${id}/${entry.name}`,
+          JSON.stringify(meta, null, 2),
         );
       } else {
         await Deno.copyFile(
           `internal/templates/${type}/${entry.name}`,
-          `scripts/${name}/${entry.name}`,
+          `scripts/${id}/${entry.name}`,
         );
       }
     }
@@ -36,5 +38,5 @@ export async function create(name: string, type: string) {
 }
 
 if (import.meta.main) {
-  await create("sample", "script");
+  await create("server", "http");
 }

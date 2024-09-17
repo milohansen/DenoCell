@@ -8,8 +8,10 @@ console.log("script.ts");
 console.log("slugify", slugify("Hello World"));
 console.log("parseArgs", parseArgs(["--help"]));
 
-const element = (<div>Hello, world!</div>);
+const element = <div>Hello, world!</div>;
 console.log("element", element);
+
+export const foo = 42;
 
 // throw new Error("This is an error");
 

@@ -1,7 +1,5 @@
-// export type Interval = {
-//   lastRunAt: Date | undefined;
-// };
-
-interface Interval {
+type Interval = {
   lastRunAt: Date | undefined;
-}
+};
+
+type CellType = "script" | "http" | "cron" | "message";

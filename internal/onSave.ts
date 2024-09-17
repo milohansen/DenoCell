@@ -1,32 +1,22 @@
-import { join } from "jsr:@std/path";
 import { equal } from "@std/assert";
 
 import { transform } from "npm:oxc-transform";
 
-import { generateMetadata, ScriptMeta } from "./parse.ts";
-import { bundle, transform as esTransform } from "./bundle.ts";
-
-function getItemPaths(id: string) {
-  const filePath = join("scripts", id);
-
-  return {
-    metadataPath: join(filePath, "meta.json"),
-    scriptPath: join(filePath, "script.tsx"),
-    // bundlePath: join(filePath, "bundle.js"),
-    bundlePath: join(filePath, "bundle"),
-  };
-}
+import { bundle } from "./bundle.ts";
+import { getCellPaths } from "./load.ts";
+import { CellMeta, generateMetadata } from "./parse.ts";
 
 export async function onSave(
   id: string,
   contents: string,
+  type?: CellType,
   bundleIfPossible = true,
 ) {
-  const { metadataPath, scriptPath, bundlePath } = getItemPaths(id);
+  const { metadataPath, scriptPath, bundlePath } = getCellPaths(id);
   const { metadata: newMetadata, staticMemberExpressionSet } =
     await generateMetadata(contents, scriptPath);
   // get existing metadata
-  let existingMeta: ScriptMeta | undefined;
+  let existingMeta: CellMeta | undefined;
   try {
     existingMeta = JSON.parse(
       await Deno.readTextFile(metadataPath),
@@ -53,6 +43,7 @@ export async function onSave(
   // newMetadata.version = (existingMeta?.version ?? -1) + 1;
   newMetadata.id = existingMeta?.id ?? "UNKNOWN";
   newMetadata.name = existingMeta?.name ?? "UNKNOWN";
+  newMetadata.type = type ?? existingMeta?.type ?? "script";
 
   await Deno.writeTextFile(
     metadataPath,

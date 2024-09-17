@@ -1,12 +1,14 @@
 {
   "id": "01J7Y5HH4JW7HH1VNRCFQPSQMK",
   "name": "sample",
-  "version": 18,
+  "type": "script",
+  "version": 19,
   "imports": [
     "jsr:@std/text/unstable-slugify",
     "jsr:@std/cli/parse-args"
   ],
   "exports": [
+    "foo",
     "name",
     "version"
   ],
@@ -218,33 +220,30 @@
               "optional": false
             },
             "init": {
-              "type": "ParenthesizedExpression",
-              "expression": {
-                "type": "JSXElement",
-                "openingElement": {
-                  "type": "JSXOpeningElement",
-                  "selfClosing": false,
-                  "name": {
-                    "type": "JSXIdentifier",
-                    "name": "div"
-                  },
-                  "attributes": [],
-                  "typeParameters": null
+              "type": "JSXElement",
+              "openingElement": {
+                "type": "JSXOpeningElement",
+                "selfClosing": false,
+                "name": {
+                  "type": "JSXIdentifier",
+                  "name": "div"
                 },
-                "closingElement": {
-                  "type": "JSXClosingElement",
-                  "name": {
-                    "type": "JSXIdentifier",
-                    "name": "div"
-                  }
-                },
-                "children": [
-                  {
-                    "type": "JSXText",
-                    "value": "Hello, world!"
-                  }
-                ]
-              }
+                "attributes": [],
+                "typeParameters": null
+              },
+              "closingElement": {
+                "type": "JSXClosingElement",
+                "name": {
+                  "type": "JSXIdentifier",
+                  "name": "div"
+                }
+              },
+              "children": [
+                {
+                  "type": "JSXText",
+                  "value": "Hello, world!"
+                }
+              ]
             },
             "definite": false
           }
@@ -280,6 +279,35 @@
           ],
           "optional": false
         }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "declaration": {
+          "type": "VariableDeclaration",
+          "kind": "const",
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "id": {
+                "type": "Identifier",
+                "name": "foo",
+                "typeAnnotation": null,
+                "optional": false
+              },
+              "init": {
+                "type": "NumericLiteral",
+                "value": 42,
+                "raw": "42"
+              },
+              "definite": false
+            }
+          ],
+          "declare": false
+        },
+        "specifiers": [],
+        "source": null,
+        "exportKind": "value",
+        "withClause": null
       },
       {
         "type": "ExportNamedDeclaration",

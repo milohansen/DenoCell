@@ -1,4 +1,4 @@
-import { execVal } from "./internal/execVal.ts";
+import { runCell } from "./internal/runCell.ts";
 
 export function add(a: number, b: number): number {
   return a + b;
@@ -17,5 +17,5 @@ if (import.meta.main) {
 
   // await run({ name: "file script", path: "./scripts/script.ts" });
   // await execVal({ type: "script", id: "script-1234", name: "script", version: 0, path: "./scripts/script.tsx" });
-  await execVal({ type: "cron", id: "cron", name: "cron", version: 0, path: "./internal/templates/cron/script.tsx" });
+  // await runCell({ type: "cron", id: "cron", name: "cron", version: 0, path: "./internal/templates/cron/script.tsx" });
 }

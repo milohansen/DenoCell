@@ -266,9 +266,11 @@ console.log("slugify", slugify("Hello World"));
 console.log("parseArgs", parseArgs(["--help"]));
 var element = /* @__PURE__ */ React.createElement("div", null, "Hello, world!");
 console.log("element", element);
+var foo = 42;
 var name = "sample";
 var version = "0.0.4";
 export {
+  foo,
   name,
   version
 };
